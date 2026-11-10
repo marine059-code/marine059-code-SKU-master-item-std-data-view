@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>올리브 품목조회</title>
+<link rel="stylesheet" href="items.css">
+<link rel="stylesheet" href="dash.css">
+</head>
+<body>
+<!-- 품목조회 모듈(2026-11-02) — 데이터 길은 config.js 가 정한다.
+     config.js 가 없으면(PC 앱 옆에서 열 때) 앱 API(/api/core) 로 읽는다. -->
+<div id="app"><div class="empty">불러오는 중…</div></div>
+<script src="config.js" onerror="window.ITEMS_CONFIG = window.ITEMS_CONFIG || { source: 'app' }"></script>
+<script src="src_supabase.js"></script>
+<script src="src_app.js"></script>
+<script src="dash.js"></script>
+<script src="items.js"></script>
+<script>ItemsWeb.start('#app');</script>
+</body>
+</html>
